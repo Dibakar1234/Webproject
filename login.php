@@ -13,6 +13,7 @@
 		<input type="submit" name="submit" id="submit" value="Login"><br>
 		<input type="reset" name="reset">
 		</form>
+		<a href="reg.php">Don't have an account</a>
 	</center>
 	
 	
