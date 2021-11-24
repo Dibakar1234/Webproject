@@ -3,7 +3,8 @@
 if(isset($_POST["spass"]))
 {
 	$email = $_SESSION["user"];
-	$upas = "update reg set password='".$_POST["pass"]."' where email='".$email."';";
+	$password = password_hash($_POST["pass"],PASSWORD_DEFAULT);
+	$upas = "update reg set password='".$password."' where email='".$email."';";
 	mysqli_query($con,$upas);
 	@header("location:WelcomeUser.php");
 }
