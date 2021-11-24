@@ -44,7 +44,7 @@ if(isset($_GET["sgender"]))
 		{ ?>
 	<center><h1>Update Details</h1></center>
 		<form action="updatedetails.php" method="post" onsubmit="return validate();">
-			New Password:<input type="password" name="pass" id="pass"><br>
+			New Password:<input type="password" name="pass" id="pass"><br><br>
 			Confirm Password:<input type="password" name="cpass" id="cpass">&nbsp;&nbsp;&nbsp;
 			<input type="submit" name="spass" value="Update">
 		</form><br>
