@@ -1,7 +1,7 @@
 <?php include("conn.php");
 
 $email = $_POST["email"];
-$password = $_POST["pass"];
+$password = password_hash($_POST["pass"],PASSWORD_DEFAULT);
 $city = $_POST["city"];
 $lang = "";
 foreach ($_POST["lang"] as $value) 
@@ -20,7 +20,7 @@ if($insert)
 	@header("location:login.php");
 else
 
-	echo "not successful...primary key violated";
+	echo "User Exists";
 
 
 ?>
