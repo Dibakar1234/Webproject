@@ -10,8 +10,8 @@ $select = mysqli_query($con,$sql);
 
 if(mysqli_num_rows($select) == 1)
 {
-	while($row=mysqli_fetch_array($select))
-	{
+		$row=mysqli_fetch_array($select);
+	
 		if(password_verify($password, $row["password"]))
 		{
 			$_SESSION["user"] = $email;
@@ -19,7 +19,7 @@ if(mysqli_num_rows($select) == 1)
 		}
 		else
 			echo "Password and Email not matched";
-	}
+	
 }
 else
 	echo "Password and Email not matched";
@@ -32,8 +32,8 @@ $select = mysqli_query($con,$sql);
 
 if(mysqli_num_rows($select) == 1)
 {
-	while($row = mysqli_fetch_array($select))
-	{
+	$row = mysqli_fetch_array($select);
+	
 		if(password_verify($password, $row["password"]))
 		{
 			$_SESSION["admin"] = $email;
@@ -41,10 +41,12 @@ if(mysqli_num_rows($select) == 1)
 		}
 		else
 			echo "Password and Email not matched";
-	}
+	
 }
 else
 	echo "Password and Email not matched";
 }
 
 ?>
+
+
